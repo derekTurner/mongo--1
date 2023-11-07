@@ -5,7 +5,7 @@ services:
   mongodb:
     image: mongo:7.0
     restart: always
-    container_name: mongodb
+    container_name: mongo-database
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
@@ -29,7 +29,7 @@ services:
       ME_CONFIG_MONGODB_AUTH_USERNAME: root
       ME_CONFIG_MONGODB_AUTH_PASSWORD: example
       ME_CONFIG_MONGODB_AUTH_DATABASE: local_library
-      MONGODB_CONNSTRING: mongodb://root:example@mongodb:27017
+      MONGODB_CONNSTRING: mongodb://root:example@mongodb:27017/
       ME_CONFIG_MONGODB_SERVER: mongodb
       ME_CONFIG_MONGODB_PORT: 27017
 #     ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
