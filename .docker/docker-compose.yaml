@@ -29,9 +29,9 @@ services:
       ME_CONFIG_MONGODB_AUTH_USERNAME: root
       ME_CONFIG_MONGODB_AUTH_PASSWORD: example
       ME_CONFIG_MONGODB_AUTH_DATABASE: local_library
-      MONGODB_CONNSTRING: mongodb://root:example@mymongodb:27017/
+      MONGODB_CONNSTRING: mongodb://mymongodb:27017/
       ME_CONFIG_MONGODB_SERVER: mymongodb
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mymongodb:27017/
+#      ME_CONFIG_MONGODB_URL: mongodb://root:example@mymongodb:27017/
       ME_CONFIG_MONGODB_PORT: 27017
 #     ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
       ME_CONFIG_BASICAUTH_USERNAME: root
