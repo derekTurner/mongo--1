@@ -2,7 +2,7 @@
 version: "3.8"
 
 services:
-  mongodb:
+  mymongodb:
     image: mongo:7.0
     restart: always
     container_name: mongo-database
@@ -29,8 +29,8 @@ services:
       ME_CONFIG_MONGODB_AUTH_USERNAME: root
       ME_CONFIG_MONGODB_AUTH_PASSWORD: example
       ME_CONFIG_MONGODB_AUTH_DATABASE: local_library
-      MONGODB_CONNSTRING: mongodb://root:example@mongodb:27017/
-      ME_CONFIG_MONGODB_SERVER: mongodb
+      MONGODB_CONNSTRING: mongodb://root:example@mymongodb:27017/
+      ME_CONFIG_MONGODB_SERVER: mymongodb
       ME_CONFIG_MONGODB_PORT: 27017
 #     ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
       ME_CONFIG_BASICAUTH_USERNAME: root
@@ -39,7 +39,7 @@ services:
       - mongo1_network 
   
     depends_on:
-      - mongodb
+      - mymongodb
 
 networks:
   mongo1_network:
