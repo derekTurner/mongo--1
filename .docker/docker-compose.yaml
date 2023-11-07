@@ -3,7 +3,7 @@ version: "3.8"
 
 services:
   mongodb:
-    image: mongo:5.0
+    image: mongo:7.0
     restart: always
     container_name: mongodb
     environment:
@@ -18,7 +18,7 @@ services:
       - 27017:27017
 
   mongo-express:
-    image: mongo-express:0.54.0
+    image: mongo-express:1.0.2
     restart: always
     container_name: mongo-express
     ports:
@@ -37,6 +37,9 @@ services:
       ME_CONFIG_BASICAUTH_PASSWORD: example
     networks: 
       - mongo1_network 
+  
+    depends_on:
+      - mongodb
 
 networks:
   mongo1_network:
